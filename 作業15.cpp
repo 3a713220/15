@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(void)
+{
+	int x, y;
+	printf("請輸入幾點:");
+	scanf("%d", &x);
+	printf("請輸入幾分:");
+	scanf("%d", &y);
+	
+	if (x > 7&&x <= 17&&y >= 0&&y <= 59)
+	{
+		printf("上學時間");
+	}
+	else if (x == 7&&y >= 30&&y <= 59)
+	{
+		printf("上學時間");
+	}
+	else if (x >= 25 || y >= 60 || y <= -1)
+	{
+		printf("輸入時間錯誤");
+	}
+	else
+		printf("放學時間");
+
+	system("pause");
+	return 0;
+}
