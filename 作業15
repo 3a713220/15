@@ -1,26 +1,28 @@
-＃包括< stdio.h中>
-＃包括< stdlib.h中>
-int  main（void）
+#include<stdio.h>
+#include<stdlib.h>
+int main(void)
 {
-	int x，y;
-	printf（“請輸入幾點幾分：”）;
-	scanf（“％d％d ”，＆x，＆y）;
+	int x, y;
+	printf("請輸入幾點:");
+	scanf("%d", &x);
+	printf("請輸入幾分:");
+	scanf("%d", &y);
 	
-	if（x> 7 && y < 17）
+	if (x > 7&&x <= 17&&y >= 0&&y <= 59)
 	{
-		printf（“上學時間”）;
+		printf("上學時間");
 	}
-	否則 if（x == 7 && y> = 30）
+	else if (x == 7&&y >= 30&&y <= 59)
 	{
-		printf（“上學時間”）;
+		printf("上學時間");
 	}
-	否則 if（x> = 24 && y> = 60）
+	else if (x >= 25 || y >= 60 || y <= -1)
 	{
-		printf（“輸入時間錯誤”）;
+		printf("輸入時間錯誤");
 	}
-	其他
-		printf（“放學時間”）;
+	else
+		printf("放學時間");
 
-	系統（“暫停”）;
-	返回 0 ;
+	system("pause");
+	return 0;
 }
